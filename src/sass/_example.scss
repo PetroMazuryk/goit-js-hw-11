@@ -26,3 +26,72 @@
   background-size: cover;
   background-position: center;
 }
+
+// ----- gallery
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item {
+  display: flex;
+  text-align: center;
+}
+
+.photo {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+
+  text-decoration: none;
+  color: #000;
+}
+
+.photo-card {
+  width: 100%;
+}
+
+.photo-card img {
+  width: 100%;
+}
+
+.search-form {
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
+}
+
+.load-more {
+  display: none;
+
+  margin-left: auto;
+  margin-right: auto;
+}
