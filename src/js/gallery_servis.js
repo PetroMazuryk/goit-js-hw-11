@@ -40,4 +40,3 @@ export default class GalleryServis {
     this.searchQuery = newSearchQuery;
   }
 }
-console.log(12);
