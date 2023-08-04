@@ -27,8 +27,13 @@
   background-position: center;
 }
 
+body {
+  background-attachment: fixed;
+  background-color: rgba(157, 228, 243, 0.7);
+}
 // ----- gallery
 .gallery {
+  padding-top: 90px;
   display: flex;
   flex-wrap: wrap;
 
@@ -37,6 +42,7 @@
 }
 
 .info {
+  padding: 0 8px;
   display: flex;
   justify-content: space-between;
 }
@@ -50,9 +56,11 @@
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
-
+  border: 1px solid grey;
   text-decoration: none;
   color: #000;
+  box-shadow: 0 0 3px 3px rgba(89, 45, 201, 0.7),
+    inset 0 0 15px rgba(84, 45, 201, 0.7);
 }
 
 .photo-card {
@@ -63,13 +71,13 @@
   width: 100%;
 }
 
-.search-form {
-  margin-top: 10px;
-  margin-bottom: 10px;
+// .search-form {
+//   margin-top: 10px;
+//   margin-bottom: 10px;
 
-  display: flex;
-  justify-content: center;
-}
+//   display: flex;
+//   justify-content: center;
+// }
 
 .container {
   padding-left: 15px;

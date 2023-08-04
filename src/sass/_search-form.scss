@@ -1,0 +1,59 @@
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  background-image: url('../images/clouds-bg.jpg');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-input {
+  font-size: 20px;
+  max-width: 300px;
+  height: 30px;
+  padding: 22px;
+  margin-right: 36px;
+  border: none;
+  background-color: transparent;
+  outline: 1px solid gray;
+  color: gray;
+  border-radius: 22px;
+  box-shadow: 0 0 10px 10px rgba(106, 69, 200, 0.7),
+    inset 0 0 30px 10px rgba(149, 190, 202, 0.7);
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7),
+    inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+}
+.search-button {
+  font-size: 20px;
+  padding: 6px 12px;
+  max-width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 22px;
+  background-color: transparent;
+  outline: 1px solid gray;
+  color: #c95e2d;
+
+  transition: all 300ms;
+  text-shadow: 0 0 8px rgb(201, 71, 45);
+  box-shadow: 0 0 10px 10px rgba(106, 69, 200, 0.7),
+    inset 0 0 30px 10px rgba(149, 190, 202, 0.7);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: rgb(55, 208, 250);
+  color: white;
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7),
+    inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+}
