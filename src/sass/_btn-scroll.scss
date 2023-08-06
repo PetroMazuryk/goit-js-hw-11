@@ -1,0 +1,50 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+
+  border-radius: 30px;
+  background-color: red;
+  font-size: 0;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+  transition: all 0.3;
+  box-shadow: 0 0 10px 10px rgba(89, 45, 201, 0.7),
+    inset 0 0 30px 10px rgba(84, 45, 201, 0.7);
+}
+
+.btn-scroll.shown {
+  display: block;
+}
+
+.btn-scroll::before {
+  position: absolute;
+  content: '';
+  background-image: url('../images/scroll.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-scroll:hover {
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7),
+    inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+  transform: scale(1.2);
+}
+
+.btn-scroll:active {
+  background-color: rgb(225, 255, 0);
+  transform: scale(1.6);
+}

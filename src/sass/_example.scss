@@ -22,7 +22,7 @@
   height: 240px;
   // ❗️❗️❗️ The path to images from a SASS file
   // is always the same as from the css folder.
-  background-image: url('../images/logo.png');
+  // background-image: url('../images/logo.png');
   background-size: cover;
   background-position: center;
 }
@@ -30,45 +30,6 @@
 body {
   background-attachment: fixed;
   background-color: rgba(157, 228, 243, 0.7);
-}
-// ----- gallery
-.gallery {
-  padding-top: 90px;
-  display: flex;
-  flex-wrap: wrap;
-
-  margin-top: -30px;
-  margin-left: -30px;
-}
-
-.info {
-  padding: 0 8px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.info-item {
-  display: flex;
-  text-align: center;
-}
-
-.photo {
-  flex-basis: calc(100% / 3 - 30px);
-  margin-top: 30px;
-  margin-left: 30px;
-  border: 1px solid grey;
-  text-decoration: none;
-  color: #000;
-  box-shadow: 0 0 3px 3px rgba(89, 45, 201, 0.7),
-    inset 0 0 15px rgba(84, 45, 201, 0.7);
-}
-
-.photo-card {
-  width: 100%;
-}
-
-.photo-card img {
-  width: 100%;
 }
 
 .container {
