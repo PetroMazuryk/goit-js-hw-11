@@ -1,0 +1,48 @@
+.js-theme {
+  width: 40px;
+  height: 40px;
+  border: none;
+  margin-right: 100px;
+  background-color: transparent;
+  background-image: url('../images/day-niight.png');
+  background-color: #59c92d;
+  border-radius: 50%;
+  box-shadow: 0 0 10px 10px rgba(106, 69, 200, 0.7),
+    inset 0 0 30px 10px rgba(149, 190, 202, 0.7);
+  transition: all 300ms;
+  cursor: pointer;
+}
+.js-theme:hover,
+.js-theme:focus {
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.8),
+    inset 0 0 30px 10px rgba(6, 230, 246, 0.8);
+}
+
+body.shown .js-theme:hover,
+body.shown .js-theme:focus {
+  box-shadow: 0 0 10px 10px rgba(255, 255, 255, 0.9),
+    inset 0 0 20px 3px rgba(255, 255, 255, 0.9);
+}
+
+.js-theme:active {
+  transform: scale(1.2);
+}
+
+body.shown .js-theme {
+  box-shadow: 0 0 10px 10px rgba(242, 10, 10, 0.7);
+  background-color: rgb(216, 18, 57);
+}
+
+body.shown {
+  background-color: rgba(13, 13, 12, 0.9);
+  background-image: url('../images/abstract-bg.jpg');
+
+  color: #0b0c0c;
+}
+body.shown .search-form {
+  background-image: url('../images/animfon.jpeg');
+}
+
+body.shown .info {
+  color: rgb(224, 213, 213);
+}
