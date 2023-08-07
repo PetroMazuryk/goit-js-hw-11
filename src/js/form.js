@@ -1,4 +1,5 @@
 import Notiflix from 'notiflix';
+
 import cardTpl from '../templates/cards.hbs';
 import GalleryServis from './gallery_servis';
 import SimpleLightbox from 'simplelightbox';
@@ -70,9 +71,13 @@ async function onClickLoadMoreBtn() {
   scroll();
 }
 
+// function cardRenderMurkup(array) {
+//   const markup = array.map(card => cardTpl(card)).join('');
+//   refs.gallery.insertAdjacentHTML('beforeend', markup);
+// }
+
 function cardRenderMurkup(array) {
-  const markup = array.map(card => cardTpl(card)).join('');
-  refs.gallery.insertAdjacentHTML('beforeend', markup);
+  refs.gallery.insertAdjacentHTML('beforeend', cardTpl(array));
 }
 
 function renderClear(element) {

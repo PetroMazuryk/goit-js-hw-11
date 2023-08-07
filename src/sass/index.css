@@ -1,0 +1,195 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+.example {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #2f2f37;
+  max-width: 960px;
+  padding: 16px;
+}
+
+.example code {
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #ff6b0a;
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.example .background {
+  height: 240px;
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  background-attachment: fixed;
+  background-color: rgba(157, 228, 243, 0.7);
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
+
+.load-more {
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  background-image: url("../images/clouds-bg.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.search-input {
+  font-size: 20px;
+  max-width: 300px;
+  height: 30px;
+  padding: 22px;
+  margin-right: 36px;
+  border: none;
+  background-color: transparent;
+  outline: 1px solid gray;
+  color: gray;
+  border-radius: 22px;
+  box-shadow: 0 0 10px 10px rgba(106, 69, 200, 0.7), inset 0 0 30px 10px rgba(149, 190, 202, 0.7);
+  transition: all 0.3s;
+}
+
+.search-input:focus {
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7), inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+}
+
+.search-button {
+  font-size: 20px;
+  padding: 6px 12px;
+  max-width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 22px;
+  background-color: transparent;
+  outline: 1px solid gray;
+  color: #c95e2d;
+  transition: all 300ms;
+  text-shadow: 0 0 8px rgb(201, 71, 45);
+  box-shadow: 0 0 10px 10px rgba(106, 69, 200, 0.7), inset 0 0 30px 10px rgba(149, 190, 202, 0.7);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: rgb(55, 208, 250);
+  color: white;
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7), inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+}
+
+.gallery {
+  padding-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.info {
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-item {
+  display: flex;
+  text-align: center;
+}
+
+.photo {
+  flex-basis: calc(33.3333333333% - 30px);
+  margin-top: 30px;
+  margin-left: 30px;
+  border: 1px solid grey;
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0 0 3px 3px rgba(89, 45, 201, 0.7), inset 0 0 15px rgba(84, 45, 201, 0.7);
+}
+
+.photo-card img {
+  padding: 10px;
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.btn-scroll {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: red;
+  font-size: 0;
+  opacity: 0.7;
+  z-index: 100;
+  display: none;
+  transition: all 0.3;
+  box-shadow: 0 0 10px 10px rgba(89, 45, 201, 0.7), inset 0 0 30px 10px rgba(84, 45, 201, 0.7);
+}
+
+.btn-scroll.shown {
+  display: block;
+}
+
+.btn-scroll::before {
+  position: absolute;
+  content: "";
+  background-image: url("../images/scroll.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn-scroll:hover {
+  box-shadow: 0 0 10px 10px rgba(6, 230, 246, 0.7), inset 0 0 30px 10px rgba(6, 230, 246, 0.7);
+  transform: scale(1.2);
+}
+
+.btn-scroll:active {
+  background-color: rgb(225, 255, 0);
+  transform: scale(1.6);
+}/*# sourceMappingURL=index.css.map */
