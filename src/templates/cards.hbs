@@ -18,11 +18,11 @@
   </a>
 </div> --}}
 
-{{#each   this}}
+{{#each this}}
 <div class="photo-card">
   <div class="owerlay">
  <a href='{{largeImageURL}}'>
-      <img class="lazyload" src="{{webformatURL}}" alt="{{tags}}" loading="lazy" width="340" height="340"/>
+      <img  class='gallery-img lazyload' data-src="{{webformatURL}}" data-alt="{{tags}}" loading="lazy" width="340" height="340"/>
       </a>
   </div>
  
@@ -40,7 +40,6 @@
       <b>Downloads </br> {{downloads}}</b>
     </p>
   </div>
-  
 </div>
 {{/each}}
 

@@ -1,9 +1,10 @@
 import Notiflix from 'notiflix';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import cardTpl from '../templates/cards.hbs';
 import GalleryServis from './gallery_servis';
 import SimpleLightbox from 'simplelightbox';
-
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryServis = new GalleryServis();

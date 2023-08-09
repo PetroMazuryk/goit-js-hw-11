@@ -9,6 +9,7 @@
 
 .photo-card {
   width: 100%;
+  padding: 8px;
   flex-basis: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
@@ -19,9 +20,36 @@
     inset 0 0 15px rgba(84, 45, 201, 0.7);
 }
 
-.photo-card img {
-  padding: 10px;
-  width: 100%;
+img {
+  display: block;
+  height: 300px;
+}
+
+.owerlay {
+  max-width: 100%;
+  border: 6px solid greenyellow;
+}
+
+.gallery-img {
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+  transform: translateX(-200%);
+  transition: all 500ms linear;
+}
+.lazyloaded {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 2000ms;
+}
+
+.gallery-img:hover,
+.gallery-img:focus {
+  transform: scale(1.025);
 }
 
 .info {
