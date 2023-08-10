@@ -48,7 +48,7 @@ async function onFormSubmit(e) {
     );
   }
   if (totalPhotos > 1) {
-    return Notify.success(`Hooray! We found ${totalPhotos} images.`);
+    Notify.success(`Hooray! We found ${totalPhotos} images.`);
   }
 
   renderClear(refs.gallery);
