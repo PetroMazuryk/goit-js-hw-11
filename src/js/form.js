@@ -1,4 +1,5 @@
-import Notiflix from 'notiflix';
+// import Notiflix from 'notiflix';
+import { Notify } from 'notiflix';
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
@@ -30,7 +31,7 @@ async function onFormSubmit(e) {
 
   if (!inputValue) {
     renderClear(refs.gallery);
-    return Notiflix.Notify.info(
+    return Notify.info(
       'Sorry, there are no images matching your search query. Please try again.'
     );
   }
@@ -42,9 +43,12 @@ async function onFormSubmit(e) {
 
   if (photoArray.length === 0) {
     renderClear(refs.gallery);
-    return Notiflix.Notify.info(
+    return Notify.failure(
       'Sorry, there are no images matching your search query. Please try again.'
     );
+  }
+  if (totalPhotos > 1) {
+    return Notify.success(`Hooray! We found ${totalPhotos} images.`);
   }
 
   renderClear(refs.gallery);
@@ -60,7 +64,7 @@ async function onClickLoadMoreBtn() {
 
   if (refs.gallery.children.length === totalPhotos) {
     refs.loadMoreBtn.style.display = 'none';
-    return Notiflix.Notify.info(
+    return Notify.info(
       'Sorry, there are no images matching your search query. Please try again.'
     );
   }
@@ -123,7 +127,7 @@ function onEntry(entryes) {
 
       if (refs.gallery.children.length === totalPhotos) {
         refs.loadMoreBtn.style.display = 'none';
-        return Notiflix.Notify.info(
+        return Notify.info(
           'Sorry, there are no images matching your search query. Please try again.'
         );
       }
