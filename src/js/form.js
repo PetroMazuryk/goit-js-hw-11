@@ -26,7 +26,7 @@ async function onFormSubmit(e) {
   e.preventDefault();
 
   let inputValue = e.currentTarget.elements.searchQuery.value;
-
+  console.log(inputValue);
   refs.loadMoreBtn.style.display = 'none';
 
   if (!inputValue) {
@@ -53,7 +53,7 @@ async function onFormSubmit(e) {
 
   renderClear(refs.gallery);
   cardRenderMurkup(photoArray);
-
+  refs.input.value = '';
   refs.loadMoreBtn.style.display = 'block';
 
   addSimpleLightbox();
@@ -97,7 +97,7 @@ function addPreventDefaultLink(link) {
 }
 
 function addSimpleLightbox() {
-  const linksEl = document.querySelectorAll('.photo');
+  const linksEl = document.querySelectorAll('.photo-card');
   linksEl.forEach(link => {
     addPreventDefaultLink(link);
   });
