@@ -3,7 +3,7 @@ const refs = {
 };
 
 const currentTheme = localStorage.getItem('theme');
-// Если поточна тема в localStorage = "dark"…
+// Якщо поточна тема в localStorage = "dark"…
 if (currentTheme === 'dark') {
   // …тоді ми використовуємо класс .dark-theme
   document.body.classList.add('shown');

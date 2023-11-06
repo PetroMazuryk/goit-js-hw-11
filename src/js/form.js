@@ -1,12 +1,16 @@
 // import Notiflix from 'notiflix';
 import { Notify } from 'notiflix';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox.css';
+// console.log(Fancybox);
+
 import 'lazysizes';
 import 'lazysizes/plugins/parent-fit/ls.parent-fit';
 
 import cardTpl from '../templates/cards.hbs';
 import GalleryServis from './gallery_servis';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryServis = new GalleryServis();
 
@@ -141,3 +145,16 @@ const options = {
 
 const observer = new IntersectionObserver(onEntry, options);
 observer.observe(refs.sentinel);
+
+// ===== fancybox plagin =====
+Fancybox.bind('[data-fancybox="gallery"]', {
+  Thumbs: true,
+  Toolbar: true,
+  captions: true,
+
+  Image: {
+    zoom: false,
+    click: true,
+    wheel: 'slide',
+  },
+});
